@@ -1,0 +1,583 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(238, 185, 12);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ====================== navigacija ============================================ */
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, #444547b9, #27303625, #1a2524a8);
+  color: rgb(223, 200, 200);
+  width: 100%;
+  z-index: 20;
+}
+
+.brand-title {
+  font-size: 4vh;
+  margin: 0rem;
+  display: flex;
+  align-items: center;
+  font-family: Cinzel, serif;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.brand-title:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+  transition: 0.4s ease-out;
+}
+
+.navbar-links li a {
+  color: rgb(238, 185, 12);
+  display: block;
+  font-family: Cinzel, serif;
+  font-size: 3vh;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 3vh 3vh 0 3vh;
+}
+
+.navbar-links li:hover {
+  background-color: rgb(170, 124, 124);
+  transform: scale(1.1) translateY(5px);
+  border-radius: 7px;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: rgb(241, 234, 234);
+  border-radius: 10px;
+}
+
+/* ================= hero =============================================== */
+
+.hero {
+  background: url(images/gutar-hero.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.heroTxt,
+.heroTxt2 {
+  color: rgb(255, 255, 255);
+  font-family: Cinzel, serif;
+  text-transform: uppercase;
+  font-size: 4vw;
+  text-align: center;
+  font-weight: 900;
+}
+
+.heroTxt2 {
+  font-size: 4vh;
+  color: rgb(255, 208, 19);
+}
+
+/* ======================================= whoweare section=========== */
+
+.whoWeAre {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #333;
+  color: rgb(238, 185, 12);
+  text-align: center;
+  font-family: Cinzel, serif;
+}
+
+.whoWeAre .question {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: #333;
+}
+
+.whoWeAre .answer {
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 5% 0 5%;
+  line-height: 40px;
+}
+/* ============================ hr atskirimas ========================== */
+
+hr {
+  width: 70px;
+}
+
+/* ========================== about section =========== */
+
+.about {
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 5% 0 5%;
+  line-height: 40px;
+}
+
+.about h5 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+/* ==================== guitar gallery ====================== */
+
+.guitarGallery h2 {
+  font-size: 2rem;
+}
+
+.guitar-guide {
+  overflow: hidden;
+  padding-bottom: 40.25%;
+  position: relative;
+  height: 0;
+}
+
+.guitar-guide iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  transition: 0.5s ease-out;
+}
+
+.column:hover {
+  transform: scale(1.1);
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 36px;
+}
+
+.column img:hover {
+  opacity: 0.8;
+  border: 1px solid rgb(206, 154, 35);
+  border-radius: 36px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: rgb(26, 23, 23);
+  font-size: 50px;
+  cursor: pointer;
+}
+/* ================================= section askirimas ======================= */
+.e {
+  border: 2px solid rgb(228, 179, 19);
+  display: inherit;
+}
+
+/* ======================= services ====================================== */
+.services {
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 5% 0 5%;
+  line-height: 40px;
+}
+
+.services h5 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.service-pav {
+  display: flex;
+  align-items: center;
+}
+
+/* ============== teachers ============================================ */
+
+.teachers {
+  display: flex;
+  flex-direction: column;
+}
+
+.teachers img {
+  border-radius: 9%;
+}
+
+.mentorName {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.strenght {
+  font-size: 1.2rem;
+  color: rgb(195, 172, 172);
+}
+
+.mentors {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mentors .bio {
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: justify;
+  padding: 0 5% 0 5%;
+  line-height: 40px;
+}
+
+.teachers h2 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.message {
+  background: rgb(77, 57, 57, 44) url(slide/slide8.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.message input {
+  height: 50px;
+  width: 100%;
+  border-radius: 9px;
+}
+
+.message h2 {
+  font-size: 2rem;
+}
+
+.message-request {
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-radius: 10px;
+  margin: auto;
+  width: 400px;
+  padding: 20px;
+  font-family: Cinzel, serif;
+}
+
+textarea {
+  border-radius: 9px;
+  width: 100%;
+}
+
+.submit-form {
+  font-family: Cinzel, serif;
+  color: white;
+  background-color: rgb(89, 170, 85);
+  width: 100%;
+  height: 50px;
+  border: none;
+}
+
+/* =========== map ================================================= */
+
+.map {
+  overflow: hidden;
+  padding-bottom: 40.25%;
+  position: relative;
+  height: 0;
+}
+
+.map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+/* =========================== klaipeda vilnius kaunas ================= */
+
+.parduotuves {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  color: rgb(228, 179, 19);
+  margin: 0;
+  padding: 0;
+}
+
+.parduotuves h3 {
+  font-family: Cinzel, serif;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+.parduotuves p {
+  font-family: Cinzel, serif;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+/* ================================ footer =========================== */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5% 0 5%;
+  background-color: rgba(8, 8, 7, 0.849);
+  color: #d3c5c5;
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+  font-size: 2vw;
+  text-transform: capitalize;
+  font-family: Cinzel, serif;
+}
+
+/* ================== icons + hover ====================================*/
+
+#facebook {
+  transition: 0.5s ease;
+}
+
+#facebook:hover {
+  transform: translateY(-10px);
+}
+
+#linked {
+  transition: 0.5s ease;
+}
+
+#linked:hover {
+  transform: translateY(-10px);
+}
+
+#twitt {
+  transition: 0.5s ease;
+}
+
+#twitt:hover {
+  transform: translateY(-10px);
+}
+
+#pint {
+  transition: 0.5s ease;
+}
+
+#pint:hover {
+  transform: translateY(-10px);
+}
+
+#googlePlus {
+  transition: 0.5s ease;
+}
+
+#googlePlus:hover {
+  transform: translateY(-10px);
+}
+
+#snap {
+  transition: 0.5s ease;
+}
+
+#snap:hover {
+  transform: translateY(-10px);
+}
+
+#vimeo {
+  transition: 0.5s ease;
+}
+
+#vimeo:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  color: rgb(134, 117, 40);
+  font-size: 6vh;
+  transition: 0.4s ease;
+}
+
+.icon:hover {
+  transform: translate(-10px);
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+}
+.logoutBtn {
+  width: 200px;
+  height: 50px;
+  padding-bottom: 10px;
+  padding-top: 13px;
+  border: 1px solid black;
+  border-radius: 9px;
+  background-color: rgb(202, 80, 9);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* ====================== scroll btn up============================== */
+
+#topBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  background: #e74d3c6b;
+  color: rgb(243, 232, 232);
+  border: none;
+  cursor: pointer;
+  display: none;
+  z-index: 200;
+  border-radius: 5%;
+  transition: 0.2s ease;
+}
+
+#topBtn:hover {
+  background-color: rgba(46, 167, 46, 0.322);
+  transform: scale(1.1);
+}
+
+/* ============= media queries ========================================= */
+
+@media (max-width: 1400px) {
+  .toggle-button {
+    display: flex;
+    top: 1.8rem;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(41, 35, 35, 0.767);
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 3vh 3vh 0 3vh;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .parduotuves {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .teachers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mentors {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .message-request {
+    width: 350px;
+  }
+}
+
+@media (max-width: 350px) {
+  .message-request {
+    width: 200px;
+  }
+}
